@@ -34,4 +34,6 @@ console.log(quizAnswers[2] === 'z');
 
 console.log('I have this many quiz answers: ' + quizAnswers.length);
 
+console.log('emptyArray : ' + emptyArray);
+
 // console.log(arrayOfThings);
