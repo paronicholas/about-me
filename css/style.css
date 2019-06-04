@@ -1,16 +1,23 @@
-#jupiter {
-  background-color: orange;
+body {
+  background-color: #201d57;
 }
 
-.mars {
-  background-color: red;
-}
 h1 {
-  border: yellow 7px solid;
-  color: magenta;
-  border-radius: 20px;
+  color: silver;
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+h2+p {
+  font-style: italic;
 }
 
 p {
-  color: chartreuse;
+  color: whitesmoke;
+}
+
+#shorter {
+  color: bisque;
 }
