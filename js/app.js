@@ -18,6 +18,9 @@ if (favColor === 'yes' || favColor === 'y') {
   alert('You didn\'t really try did you...');
 }
 
+var colorEl = document.getElementById('colorRes');
+colorEl.textContent = favColor;
+
 // Favorite food topping
 var favFoodTopping = prompt('Is your favorite food topping Vermont maple syrup?');
 console.log('fav food topping initial answer : ' + favFoodTopping);
@@ -32,6 +35,9 @@ if (favFoodTopping === 'yes' || favFoodTopping === 'y') {
 } else {
   alert('Again! You didn\'t really try did you...');
 }
+
+var toppingEl = document.getElementById('toppingRes');
+toppingEl.textContent = favFoodTopping;
 
 // Favorite board game
 var favBoardGame = prompt('Is your least favorite board game Settler\'s of Catan?');
@@ -48,8 +54,11 @@ if (favBoardGame === 'yes' || favBoardGame === 'y') {
   alert('Not again! You didn\'t try at all...');
 }
 
+var gameEl = document.getElementById('gameRes');
+gameEl.textContent = favBoardGame;
+
 // Favorite pet type
-var favPet = prompt('Is your pet a dog?');
+var favPet = prompt('Is your favorite pet a dog?');
 console.log('fav pet initial answer : ' + favPet);
 favPet = favPet.toLowerCase();
 console.log('fav pet after lower : ' + favPet);
@@ -62,6 +71,9 @@ if (favPet === 'yes' || favPet === 'y') {
 } else {
   alert('You\'ve got one more chance! You didn\'t try at all, again...');
 }
+
+var petEl = document.getElementById('petRes');
+petEl.textContent = favPet;
 
 // Favorite music choice
 var favMusic = prompt('Is your favorite music genre Metal?');
@@ -77,3 +89,6 @@ if (favMusic === 'yes' || favMusic === 'y') {
 } else {
   alert('I told you this was your last chance... there\'s nothing left');
 }
+
+var musicEl = document.getElementById('musicRes');
+musicEl.textContent = favMusic;
