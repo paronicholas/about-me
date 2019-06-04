@@ -34,16 +34,16 @@ if (favFoodTopping === 'yes' || favFoodTopping === 'y') {
 }
 
 // Favorite board game
-var favBoardGame = prompt('Is your favorite board game Settler\'s of Catan?');
+var favBoardGame = prompt('Is your least favorite board game Settler\'s of Catan?');
 console.log('fav board game initial answer : ' + favBoardGame);
 favBoardGame = favBoardGame.toLowerCase();
 console.log('fav board game after lower : ' + favBoardGame);
 console.log('fav board game first letter after lower : ' + favBoardGame[0]);
 
 if (favBoardGame === 'yes' || favBoardGame === 'y') {
-  alert('Catan is the best board game. Hands down, no questions asked');
-} else if (favBoardGame === 'no' || favBoardGame === 'n') {
   alert('You should have better taste in board games');
+} else if (favBoardGame === 'no' || favBoardGame === 'n') {
+  alert('Catan is the best board game. Hands down, no questions asked');
 } else {
   alert('Not again! You didn\'t try at all...');
 }

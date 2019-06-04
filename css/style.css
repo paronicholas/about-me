@@ -2,8 +2,37 @@ body {
   background-color: #201d57;
 }
 
-h1 {
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-family: monospace, sans-serif;
+  font: bold;
   color: silver;
+  background-color: #1d3757;
+}
+
+main {
+  margin-top: 100px;
+  display: block;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace, sans-sarif;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-family: monospace, sans-serif;
+  font: bold;
+  color: silver;
+  background-color: #1d3757;
 }
 
 h2 {
@@ -19,5 +48,9 @@ p {
 }
 
 #shorter {
-  color: bisque;
+  color: oldlace;
+}
+
+.responses {
+  color: wheat;
 }
