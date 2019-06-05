@@ -40,7 +40,7 @@ var toppingEl = document.getElementById('toppingRes');
 toppingEl.textContent = favFoodTopping;
 
 // Favorite board game
-var favBoardGame = prompt('Is your least favorite board game Settler\'s of Catan?');
+var favBoardGame = prompt('Is your least favorite board game Settlers of Catan?');
 console.log('fav board game initial answer : ' + favBoardGame);
 favBoardGame = favBoardGame.toLowerCase();
 console.log('fav board game after lower : ' + favBoardGame);
