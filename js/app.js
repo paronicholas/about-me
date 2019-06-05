@@ -1,5 +1,11 @@
 'use strict';
 
+/*
+var nameEl = document...;
+nameEl.textCon...;
+These lines allow for user input from the prompt to be inserted into the html page as the users response.
+*/
+
 // Welcome message
 alert('Welcome to the guessing game, please answer with yes/y or no/n');
 
@@ -55,7 +61,7 @@ if (favBoardGame === 'yes' || favBoardGame === 'y') {
 }
 
 var gameEl = document.getElementById('gameRes');
-gameEl.textContent = favBoardGame;
+gameEl.textContent = favBoardGame; //
 
 // Favorite pet type
 var favPet = prompt('Is your favorite pet a dog?');
