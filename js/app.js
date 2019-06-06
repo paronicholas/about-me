@@ -10,65 +10,70 @@ var randomHTML = 'randomRes';
 var randomNumber = 'randomNumber';
 var stateHTML = 'stateRes';
 
-// question 1-5 arrays
-var questionArray = [
-  'Is my favorite color #201d57?',
-  'Is my favorite food topping Vermont maple syrup?',
-  'Is my least favorite board game Settlers of Catan?',
-  'Is my favorite pet a dog?',
-  'Is my favorite music genre Metal?'
-];
-
-var answersCorrect = [
-  'My new favorite color is #201d57',
-  'That\'s definitely the right choice, Vermont maple syrup is the best!',
-  'Catan is the best board game. Hands down, no questions asked',
-  'Dog\'s are the best!',
-  'Rock on my friend, rock on!'
-];
-
-var answersIncorrect = [
-  'I hate you we aren\'t friends anymore',
-  'You\'re wrong and should rethink your life choices',
-  'You should have better taste in board games',
-  'You should really consider getting a dog',
-  'You should be rocking a little harder'
-];
-
-var htmlOutputClasses = [
-  'colorRes',
-  'toppingRes',
-  'gameRes',
-  'petRes',
-  'musicRes',
+/*
+question 1-5 arrays
+sub arrays are structured:
+0 = question, 1 = correct response, 2 = incorrect response, 3 = html id link
+*/
+var questionAllArray = [
+  [
+    'Is my favorite color #201d57?',
+    'My new favorite color is #201d57',
+    'I hate you we aren\'t friends anymore',
+    'colorRes'
+  ],
+  [
+    'Is my favorite food topping Vermont maple syrup?',
+    'That\'s definitely the right choice, Vermont maple syrup is the best!',
+    'You\'re wrong and should rethink your life choices',
+    'toppingRes'
+  ],
+  [
+    'Is my least favorite board game Settlers of Catan?',
+    'Catan is the best board game. Hands down, no questions asked',
+    'You should have better taste in board games',
+    'gameRes'
+  ],
+  [
+    'Is my favorite pet a dog?',
+    'Dog\'s are the best!',
+    'You should really consider getting a dog',
+    'petRes'
+  ],
+  [
+    'Is my favorite music genre Metal?',
+    'Rock on my friend, rock on!',
+    'You should be rocking a little harder',
+    'musicRes'
+  ]
 ];
 
 // Welcome message
 alert('Welcome to the guessing game, please answer with yes/y or no/n');
 
 // question loop
-for(i = 0; i < questionArray.length; i++){
+for(i = 0; i < questionAllArray.length; i++){
   do{
-    var answer = prompt(questionArray[i]).toLowerCase();
+    var answer = prompt(questionAllArray[i][0]).toLowerCase();
     console.log('Question ' + i + ' : ' + answer); // displays array index
   } while(answer !== 'yes' && answer !== 'y' && answer !== 'no' && answer !== 'n');
 
   switch(i){
   case 0:case 1:case 3:case 4:
     if(answer === 'yes' || answer === 'y') {
-      alert(answersCorrect[i]);
+      alert(questionAllArray[i][1]);
       correctCount++;
     } else {
-      alert(answersIncorrect[i]);
+      alert(questionAllArray[i][2]);
     }
     break;
 
   case 2:
     if(answer === 'no' || answer === 'n') {
-      alert(answersCorrect[i]);
+      alert(questionAllArray[i][1]);
       correctCount++;
     } else {
-      alert(answersIncorrect[i]);
+      alert(questionAllArray[i][2]);
     }
     break;
 
@@ -76,7 +81,7 @@ for(i = 0; i < questionArray.length; i++){
     break;
   }
 
-  document.getElementById(htmlOutputClasses[i]).textContent = answer;
+  document.getElementById(questionAllArray[i][3]).textContent = answer;
   console.log('Correct count : ' + correctCount);
 }
 
