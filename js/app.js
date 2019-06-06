@@ -99,9 +99,9 @@ for(tryCounter = 0; tryCounter < 5; tryCounter++){
   }
 }
 if(tryCounter === 5){
-  document.getElementById(randomHTML).textContent = 'You didn\'t get it!';
+  document.getElementById(randomHTML).textContent = 'You didn\'t get it';
 } else{
-  document.getElementById(randomHTML).textContent = 'You got it!';
+  document.getElementById(randomHTML).textContent = 'You got it';
 }
 console.log('Correct count : ' + correctCount);
 document.getElementById(randomNumber).textContent = randomNum;
