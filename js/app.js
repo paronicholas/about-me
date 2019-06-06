@@ -92,6 +92,8 @@ for(tryCounter = 0; tryCounter < 5; tryCounter++){
     alert('Too high.');
   } else if(ranUserInp < randomNum){
     alert('Too low.');
+  } else if(isNaN(ranUserInp)) {
+    alert('That\'s not a number.');
   } else{
     alert('You got it!');
     correctCount++;
