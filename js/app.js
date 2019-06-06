@@ -55,46 +55,46 @@ var whereLived = [
 
 // Welcome message
 alert('Welcome to the guessing game, please answer with yes/y or no/n');
+
 //question 1-5
 var questionsAboutMe = function(qArr){
   // question loop
   for(i = 0; i < qArr.length; i++){
-  do{
-    var answer = prompt(qArr[i][0]).toLowerCase();
-    console.log('Question ' + i + ' : ' + answer); // displays array index
-  } while(answer !== 'yes' && answer !== 'y' && answer !== 'no' && answer !== 'n');
+    do{
+      var answer = prompt(qArr[i][0]).toLowerCase();
+      console.log('Question ' + i + ' : ' + answer); // displays array index
+    } while(answer !== 'yes' && answer !== 'y' && answer !== 'no' && answer !== 'n');
 
-  switch(i){
-  case 0:case 1:case 3:case 4:
-    if(answer === 'yes' || answer === 'y') {
-      alert(qArr[i][1]);
-      correctCount++;
-    } else {
-      alert(qArr[i][2]);
+    switch(i){
+    case 0:case 1:case 3:case 4:
+      if(answer === 'yes' || answer === 'y') {
+        alert(qArr[i][1]);
+        correctCount++;
+      } else {
+        alert(qArr[i][2]);
+      }
+      break;
+
+    case 2:
+      if(answer === 'no' || answer === 'n') {
+        alert(qArr[i][1]);
+        correctCount++;
+      } else {
+        alert(qArr[i][2]);
+      }
+      break;
+
+    default:
+      break;
     }
-    break;
 
-  case 2:
-    if(answer === 'no' || answer === 'n') {
-      alert(qArr[i][1]);
-      correctCount++;
-    } else {
-      alert(qArr[i][2]);
-    }
-    break;
-
-  default:
-    break;
+    document.getElementById(qArr[i][3]).textContent = answer;
+    console.log('Correct count : ' + correctCount);
   }
-
-  document.getElementById(qArr[i][3]).textContent = answer;
-  console.log('Correct count : ' + correctCount);
-  }
-}
+};
 
 // random number question
 var numberQuestion = function(){
-  
   var randomNum = Math.floor(Math.random() * 10);
   console.log('Random number : ' + randomNum + ' is a ' + typeof randomNum);
   for(tryCounter = 0; tryCounter < 5; tryCounter++){
@@ -117,7 +117,7 @@ var numberQuestion = function(){
   }
   document.getElementById(randomNumber).textContent = randomNum;
   console.log('Correct count : ' + correctCount);
-}
+};
 
 //where I lived
 // adding 'loop1:' response sourced from: https://stackoverflow.com/questions/183161/whats-the-best-way-to-break-from-nested-loops-in-javascript
@@ -137,17 +137,16 @@ var placesLived = function(statesLived){
     }
   }
   console.log('Correct count : ' + correctCount);
-}
+};
 
 //html function
 var htmlUpdate = function(counterNum, congratMess){
-  
   if(tryCounter === parseInt(counterNum)){
     document.getElementById(congratMess).textContent = 'You didn\'t get it';
   } else{
     document.getElementById(congratMess).textContent = 'You got it';
   }
-}
+};
 
 
 //question 1-5
