@@ -3,6 +3,7 @@
   <head>
     <title>About Me</title>
 
+    <!-- <link rel="stylesheet" href="./css/reset.css" type="text/css"> -->
     <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
 
@@ -10,26 +11,61 @@
     <header><h1>All you need to know!</h1></header>
 
     <main>
-      <h2>About Nicholas Paro</h2>
+      <div id="intro">
+        <ul id="introList">
+          <h2>Welcome</h2>
+          <p>My name is Nick and I am a new <abbr class="shorter" title="Software Development Engineer">SDE</abbr> Military Apprentice and am currently working at Amazon.<br> As a developer, I want to use the coding and emotional intelligence skills I gain from Code Fellows to help drive my Amazon career forward.</p>
+          <h3>Education History</h3>
+          <li><abbr class="shorter" title="Bachelor of Fine Arts">BFA</abbr> in Music Theory and Composition from Carnegie Mellon University, class of 2012</li>
+          <li><abbr class="shorter" title="Bachelor of Science">BS</abbr> in Computer Science focus in Software Engineering from Southern New Hampshire University, class of 2020</li>
+          <h3>Work History</h3>
+          <li>US Army, 2013 to 2017</li>
+          <li>Old Dominion Freight Line, 2017 to 2019</li>
+          <li>Amazon, 2019 to present</li>
+        </ul>
+      </div>
 
-      <p>Hello all, welcome to my About Me page! My name is Nick and I am a new <abbr id="shorter" title="Software Development Engineer">SDE</abbr> Military Apprentice and am currently working at Amazon.</p>
-      <p>As a developer, I want to use the coding and emotional intelligence skills I gain from Code Fellows to help drive my Amazon career forward.</p>
-      <p class="responses">Here is what you answered:</p>
-      <ol class="responses">
-        <li>For favorite color of #201d57, you said: <p id="colorRes" class="responses"></p></li>
-        <li>Vermont maple syrup is the best syrup, you said: <p id="toppingRes" class="responses"></p></li>
-        <li>Catan is the worst board game, you said: <p id="gameRes" class="responses"></p></li>
-        <li>Dogs are the best pets, you said: <p id="petRes" class="responses"></p></li>
-        <li>Metal is the best music, you said: <p id="musicRes" class="responses"></p></li>
-      </ol>
-      <p class="responses">Also, just so you know... the answers to the questions at the beginning are:</p>
-      <ol class="responses">
-        <li>Yes, my new favorite color is #201d57 (it's also the background color)</li>
-        <li>Yes, Vermont maple syrup is the best and only real syrup</li>
-        <li>No, Catan is the best board game</li>
-        <li>Yes, dogs are the best and cats are the worst</li>
-        <li>Yes, Metal is the best overall genre... rock on</li>
-      </ol>
+      <div id="qAndA">
+        <ul id="questions" class="noDot">
+          <h2>Questions</h2>
+          <li>Is my favorite color #201d57?</li>
+          <li>Is my favorite food topping Vermont maple syrup?</li>
+          <li>Is my least favorite board game Settlers of Catan?</li>
+          <li>Is my favorite color #201d57?Is my favorite pet a dog?</li>
+          <li>Is my favorite music genre Metal?</li>
+          <li>What was the random number between 0 and 9?</li>
+          <li>What state other than WA have I lived in?</li>
+        </ul>
+        <ul id="answers" class="noDot">
+          <h2>Answers</h2>
+          <li>You answered <b id="colorRes"></b>, and the correct answer is <b>yes</b>.</li>
+          <li>You answered <b id="toppingRes"></b>, and the correct answer is <b>yes</b>.</li>
+          <li>You answered <b id="gameRes"></b>, and the correct answer is <b>no</b>.</li>
+          <li>You answered <b id="petRes"></b>, and the correct answer is <b>yes</b>.</li>
+          <li>You answered <b id="musicRes"></b>, and the correct answer is <b>yes</b>.</li>
+          <li><b id="randomRes"></b>, and the number generated was <b id="randomNumber"></b>.</li>
+          <li><b id="stateRes"></b>, I've lived in VT, PA, and AZ.</li>
+        </ul>
+        <ul class="noDot">
+          <li>You answered <b id="correctRes"></b> out of <b>7</b> questions</li>
+        </ul>
+      </div>
+
+      <div id="topTen">
+        <ol id="topTenList">
+          <h2>Top Ten Movies</h2>
+          <li>The Shawshank Redemption</li>
+          <li>The Matrix</li>
+          <li>Avengers: Endgame</li>
+          <li>Interstellar</li>
+          <li>Lost in Space</li>
+          <li>Deadpool 2</li>
+          <li>Deadpool</li>
+          <li>Skyscraper</li>
+          <li>Rampage</li>
+          <li>The Lego Movie</li>
+        </ol>
+      </div>
     </main>
 
     <footer>
