@@ -90,7 +90,7 @@ var questionsAboutMe = function(qArr){
   document.getElementById(qArr[i][3]).textContent = answer;
   console.log('Correct count : ' + correctCount);
   }
-}
+};
 
 // random number question
 var numberQuestion = function(){
@@ -117,7 +117,7 @@ var numberQuestion = function(){
   }
   document.getElementById(randomNumber).textContent = randomNum;
   console.log('Correct count : ' + correctCount);
-}
+};
 
 //where I lived
 // adding 'loop1:' response sourced from: https://stackoverflow.com/questions/183161/whats-the-best-way-to-break-from-nested-loops-in-javascript
@@ -137,7 +137,7 @@ var placesLived = function(statesLived){
     }
   }
   console.log('Correct count : ' + correctCount);
-}
+};
 
 //html function
 var htmlUpdate = function(counterNum, congratMess){
@@ -147,7 +147,7 @@ var htmlUpdate = function(counterNum, congratMess){
   } else{
     document.getElementById(congratMess).textContent = 'You got it';
   }
-}
+};
 
 
 //question 1-5
