@@ -19,7 +19,7 @@ var questionAllArray = [
   [
     'Is my favorite color #201d57?',
     'My new favorite color is #201d57',
-    'I hate you we aren\'t friends anymore',
+    'It\'s ok, I didn\'t know about it before',
     'colorRes'
   ],
   [
