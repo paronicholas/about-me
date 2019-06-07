@@ -47,6 +47,18 @@ var questionAllArray = [
     'musicRes'
   ]
 ];
+
+/*
+Setting the number of attempts for random and where lived questions
+*/
+var attemptSet = [
+  4, // random number question
+  6 // where lived question
+];
+
+/*
+Setting places lived
+*/
 var whereLived = [
   'VT',
   'PA',
@@ -56,7 +68,7 @@ var whereLived = [
 // Welcome message
 alert('Welcome to the guessing game, please answer with yes/y or no/n');
 
-//question 1-5
+// asks question 1-5
 var questionsAboutMe = function(qArr){
   // question loop
   for(i = 0; i < qArr.length; i++){
@@ -93,13 +105,13 @@ var questionsAboutMe = function(qArr){
   }
 };
 
-// random number question
-var numberQuestion = function(){
+// ask random number question
+var numberQuestion = function(attempts){
   var randomNum = Math.floor(Math.random() * 10);
   console.log('Random number : ' + randomNum + ' is a ' + typeof randomNum);
-  for(tryCounter = 0; tryCounter < 5; tryCounter++){
+  for(tryCounter = 0; tryCounter < attempts; tryCounter++){
     attemptNum = tryCounter + 1;
-    var ranUserInp = parseInt(prompt(attemptNum + ' of 5 tries. Guess the random number between 0 and 9:'));
+    var ranUserInp = parseInt(prompt(attemptNum + ' of ' + attempts + ' tries. Guess the random number between 0 and 9:'));
     console.log('User input is : ' + ranUserInp + ' and is a ' + typeof ranUserInp);
     console.log('Attempt Number : ' + attemptNum);
 
@@ -119,27 +131,27 @@ var numberQuestion = function(){
   console.log('Correct count : ' + correctCount);
 };
 
-//where I lived
-// adding 'loop1:' response sourced from: https://stackoverflow.com/questions/183161/whats-the-best-way-to-break-from-nested-loops-in-javascript
-var placesLived = function(statesLived){
-  loop1:
-  for(tryCounter = 0; tryCounter < 6; tryCounter++){
+// asks where I lived
+var placesLived = function(statesLived, attempts){
+  for(tryCounter = 0; tryCounter < attempts; tryCounter++){
     attemptNum = tryCounter + 1;
-    var livedGuess = prompt(attemptNum + ' of 6 tries. Guess a state I have lived in outside of Washington (use state appbreviations):').toUpperCase();
+    var livedGuess = prompt(attemptNum + ' of ' + attempts + ' tries. Guess a state I have lived in outside of Washington (use state appbreviations):').toUpperCase();
     console.log('Guess : ' + livedGuess);
     console.log('Attempt Number : ' + attemptNum);
     for(i = 0; i < statesLived.length; i++){
       if(livedGuess === statesLived[i]){
         alert('You got it, great job!');
         correctCount++;
-        break loop1;
+        return;
+      } else{
+        alert('I haven\'t lived there, try again.');
       }
     }
   }
   console.log('Correct count : ' + correctCount);
 };
 
-//html function
+// html function
 var htmlUpdate = function(counterNum, congratMess){
   if(tryCounter === parseInt(counterNum)){
     document.getElementById(congratMess).textContent = 'You didn\'t get it';
@@ -149,16 +161,19 @@ var htmlUpdate = function(counterNum, congratMess){
 };
 
 
+/*
+Function calls for main body program execution
+*/
 //question 1-5
 questionsAboutMe(questionAllArray);
 
 //questions 6
-numberQuestion();
-htmlUpdate(5, randomHTML);
+numberQuestion(attemptSet[0]);
+htmlUpdate(attemptSet[0], randomHTML);
 
 //question 7
-placesLived(whereLived);
-htmlUpdate(6, stateHTML);
+placesLived(whereLived, attemptSet[1]);
+htmlUpdate(attemptSet[1], stateHTML);
 
 //final count
 document.getElementById(correctHTML).textContent = correctCount;
