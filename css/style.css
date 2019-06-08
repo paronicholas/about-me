@@ -49,6 +49,10 @@ footer {
   list-style: none;
 }
 
+a {
+  color: silver;
+}
+
 /* Introduction Section */
 #intro {
   color: whitesmoke;
