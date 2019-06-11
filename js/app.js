@@ -66,7 +66,8 @@ var whereLived = [
 ];
 
 // Welcome message
-alert('Welcome to the guessing game, please answer with yes/y or no/n');
+var userName = prompt('Before we begin, what is your name?');
+alert(userName + ', welcome to my about me site. For the first 5 questions, please answer the with yes/y or no/n. For the final 2 questions, follow the prompted instructions.');
 
 // asks question 1-5
 var questionsAboutMe = function(qArr){
@@ -145,6 +146,7 @@ var placesLived = function(statesLived, attempts){
         return;
       } else{
         alert('I haven\'t lived there, try again.');
+        break;
       }
     }
   }
